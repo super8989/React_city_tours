@@ -3,10 +3,18 @@ import "./tour.scss";
 
 class Tour extends Component {
 	render() {
+		const { id, city, img, name, info } = this.props.tour;
+		const { removeTour } = this.props;
+
 		return (
-			<div>
-				<h1>Tour</h1>
-			</div>
+			<article className='tour'>
+				<div className='img-container'>
+					<img src={img} alt='image of the tour' />
+					<span className='close-btn'>
+						<i className='fas fa-window-close' />
+					</span>
+				</div>
+			</article>
 		);
 	}
 }
